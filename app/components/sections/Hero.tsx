@@ -1,117 +1,81 @@
-// app/components/sections/Hero.tsx
-import { Github, Linkedin, Mail, Download } from "lucide-react";
-
 export default function Hero() {
   return (
-    <section className="min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(var(--color-primary),0.15),transparent_50%)] dark:bg-[radial-gradient(ellipse_at_center,rgba(var(--color-primary),0.15),transparent_50%)]"></div>
+    <section className="relative min-h-[88vh] overflow-hidden">
+      <div className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full bg-[var(--accent)]/10 blur-3xl soft-float" />
+      <div className="pointer-events-none absolute -left-16 bottom-16 h-64 w-64 rounded-full bg-[var(--highlight)]/10 blur-3xl" />
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-cyan-500/10 dark:bg-cyan-600/10 rounded-full blur-3xl"></div>
+      <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-5xl flex-col justify-center px-5 py-20 sm:px-8">
+        <div className="reveal max-w-3xl">
+          <p className="mb-5 text-sm font-medium tracking-[0.18em] text-[var(--accent)] uppercase">
+            Islamabad · Remote-ready
+          </p>
 
-      {/* Animated geometric shapes */}
-      <div className="absolute top-1/4 left-1/4 w-16 h-16 border-2 border-blue-500/20 dark:border-blue-400/20 rounded-xl animate-float-slow"></div>
-      <div className="absolute bottom-1/4 right-1/3 w-10 h-10 border-2 border-cyan-500/20 dark:border-cyan-400/20 rounded-full animate-float-medium"></div>
-      <div className="absolute top-1/3 right-1/4 w-20 h-20 border-2 border-blue-600/20 dark:border-blue-500/20 rotate-45 animate-float-fast"></div>
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div className="space-y-8">
-          {/* Name with gradient */}
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
-              Muhammad Jawad Amin
-            </span>
+          <h1 className="font-display text-[clamp(2.75rem,8vw,5.25rem)] leading-[0.95] font-semibold tracking-tight text-[var(--ink)]">
+            Muhammad
+            <br />
+            Jawad Amin
           </h1>
 
-          {/* Job title */}
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300">
-            Software Engineer || Full Stack Developer
-          </h2>
+          <div className="mt-4 h-[3px] w-24 origin-left rounded-full bg-[var(--accent)] draw-underline" />
 
-          {/* Subtitle for mobile development */}
-          <div className="flex flex-wrap justify-center items-center gap-3 text-lg md:text-xl">
-            <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 text-blue-700 dark:text-blue-300 rounded-full font-medium border border-blue-200 dark:border-blue-700">
-              Mobile App Developer
-            </span>
-            <span className="px-4 py-2 bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 text-emerald-700 dark:text-emerald-300 rounded-full font-medium border border-emerald-200 dark:border-emerald-700">
-              MERN Stack Expert
-            </span>
-          </div>
+          <p className="mt-7 max-w-xl text-xl text-[var(--ink-soft)] sm:text-2xl">
+            Mobile & Web App Developer
+          </p>
 
-          {/* Description in a glass card */}
-          <div className="max-w-3xl mx-auto backdrop-blur-sm bg-white/50 dark:bg-gray-900/50 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-lg">
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              Highly motivated and results-driven <span className="font-semibold text-blue-600 dark:text-blue-400">Mobile & Web App Developer</span> with hands-on experience in 
-              <span className="font-semibold text-emerald-600 dark:text-emerald-400"> MERN Stack</span>, 
-              <span className="font-semibold text-purple-600 dark:text-purple-400"> React Native</span>, 
-              and <span className="font-semibold text-cyan-600 dark:text-cyan-400">Next.js</span>. 
-              Proven ability to develop and maintain robust mobile and web applications, collaborate with cross-functional teams, 
-              and contribute to digital transformation using cutting-edge technologies.
-            </p>
-          </div>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg">
+            Building reliable products with MERN, React Native, and Next.js —
+            from pixel-perfect interfaces to scalable APIs, with a practical
+            focus on performance and craft.
+          </p>
 
-          {/* Social links */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://github.com/MJawadAmin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors shadow-sm hover:shadow-md"
-            >
-              <Github size={20} />
-              <span>GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/muhammad-jawad-amin-a70389216/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors shadow-sm hover:shadow-md"
-            >
-              <Linkedin size={20} />
-              <span>LinkedIn</span>
-            </a>
-            <a
-              href="mailto:jjawadamn883@gmail.com"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors shadow-sm hover:shadow-md"
-            >
-              <Mail size={20} />
-              <span>Email</span>
-            </a>
-          </div>
-
-          {/* CTA buttons */}
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
+          <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
-              className="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg shadow-lg hover:shadow-xl transition-all font-medium"
+              className="inline-flex items-center justify-center rounded-md bg-[var(--accent)] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[var(--accent-hover)]"
             >
-              Contact Me
+              Get in touch
             </a>
             <a
               href="/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 rounded-lg flex items-center gap-2 shadow-lg hover:shadow-xl transition-all backdrop-blur-sm bg-white/50 dark:bg-gray-900/40 font-medium"
+              className="inline-flex items-center justify-center rounded-md border border-[var(--line)] bg-[var(--bg-elevated)] px-6 py-3 text-sm font-medium text-[var(--ink)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
             >
-              <Download size={20} />
-              Resume
+              View resume
+            </a>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--ink-muted)]">
+            <a
+              href="https://github.com/MJawadAmin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 hover:text-[var(--accent)] hover:underline"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jawad-amin-a70389216/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 hover:text-[var(--accent)] hover:underline"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:jjawadamn883@gmail.com"
+              className="underline-offset-4 hover:text-[var(--accent)] hover:underline"
+            >
+              jjawadamn883@gmail.com
+            </a>
+            <a
+              href="tel:+923167388373"
+              className="underline-offset-4 hover:text-[var(--accent)] hover:underline"
+            >
+              (+92) 316–7388373
             </a>
           </div>
         </div>
-
-        {/* Scroll down indicator */}
-        {/* <div className="absolute -bottom-23 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a
-            href="#about"
-            aria-label="Scroll down"
-            className="flex items-center flex-col gap-2 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
-          >
-            <span className="text-sm font-medium">Explore</span>
-            <ChevronDown size={24} />
-          </a>
-        </div> */}
       </div>
     </section>
   );

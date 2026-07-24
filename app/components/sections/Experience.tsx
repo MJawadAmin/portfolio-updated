@@ -1,47 +1,79 @@
-// app/components/sections/Experience.tsx
 import SectionHeading from "../ui/SectionHeading";
 import ExperienceItem from "../ui/ExperienceItem";
 
+const experiences = [
+  {
+    title: "Frontend Developer",
+    company: "Techbeel, Oman (Remote)",
+    period: "May 2026 – Present",
+    responsibilities: [
+      "Building and maintaining web and mobile applications with a strong focus on performance, scalability, and user experience.",
+      "Developing pixel-perfect, responsive interfaces from Figma designs with consistency across devices and screen sizes.",
+      "Integrating application endpoints and collaborating with backend developers for reliable platform functionality.",
+      "Delivering and enhancing e-commerce applications — new features, issue resolution, and continuous UX improvements.",
+      "Working with Docker, AWS, and CI/CD pipelines to support efficient development, testing, and deployment.",
+      "Collaborating with UI/UX designers, backend developers, QA, and cross-functional teams across the full SDLC.",
+      "Writing clean, reusable, maintainable code, participating in reviews, and optimizing application performance.",
+      "Leveraging Cursor, Claude, Trae, and Antigravity to accelerate workflows and improve code quality.",
+    ],
+  },
+  {
+    title: "React Native Developer",
+    company: "Blockmob Labs, Islamabad, Pakistan",
+    period: "November 2025 – May 2026",
+    responsibilities: [
+      "Built blockchain and e-commerce mobile apps with scalable, high-performance cross-platform solutions.",
+      "Collaborated with backend, blockchain, UI/UX, and SQA teams for smooth integration and quality releases.",
+      "Participated across the full lifecycle — requirements, architecture, implementation, testing, deployment, and post-release work.",
+      "Implemented secure payment flows, wallet connectivity, transactions, and API integrations with strong security practices.",
+      "Wrote clean, modular, reusable code with documentation and continuous review feedback.",
+    ],
+  },
+  {
+    title: "React Native & MERN Stack Developer",
+    company: "ALIMCOSOFT (SMC-PRIVATE) LIMITED, Islamabad",
+    period: "February 2025 – October 2025",
+    responsibilities: [
+      "Designed, developed, and optimized React Native apps and MERN web platforms for performance and scalability.",
+      "Worked with product managers, designers, backend engineers, and SQA to turn requirements into user-focused solutions.",
+      "Contributed to digital transformation by modernizing legacy processes and improving usability and efficiency.",
+      "Supported end-to-end delivery — architecture, development, deployment, monitoring, and long-term maintenance.",
+    ],
+  },
+  {
+    title: "React & Node.js Developer",
+    company: "Mehdi Technologies Pvt. Ltd., Islamabad",
+    period: "July 2024 – February 2025",
+    responsibilities: [
+      "Built and maintained dynamic, responsive, scalable web applications using React.js and Node.js.",
+      "Worked with multidisciplinary teams to deliver customized solutions aligned with client goals.",
+      "Contributed to modernization projects that improved performance and user satisfaction.",
+      "Provided technical consulting, deployment support, and maintenance for stable production systems.",
+    ],
+  },
+];
+
 export default function Experience() {
-  const experiences = [
-    {
-      title: "React Native & MERN Stack Developer",
-      company: "ALIMCOSOFT (SMC-PRIVATE) LIMITED, ISLAMABAD",
-      period: "March 2025 – Present",
-      responsibilities: [
-        "Developed and maintained React Native mobile applications and MERN stack web solutions, sharpening expertise in both front-end and back-end development.",
-        "Collaborated effectively with cross-functional teams, translating client needs into well-designed and implemented software solutions.",
-        "Contributed to key digital transformation projects, significantly optimizing client operations and improving overall user experience.",
-        "Provided comprehensive technical consulting and support, ensuring efficient deployment and smooth operation of IT solutions.",
-      ],
-    },
-    {
-      title: "React & Node.js Developer",
-      company: "Mehdi Technologies PVT LTD, ISLAMABAD",
-      period: "November 2024 – March 2025",
-      responsibilities: [
-        "Developed and maintained dynamic web applications using React.js and Node.js.",
-        "Partnered with diverse teams to design and implement tailored software solutions that met specific client requirements.",
-        "Participated in digital transformation initiatives, enhancing client operations and user experience.",
-        "Delivered technical consulting and support, ensuring the successful and efficient deployment of IT solutions.",
-      ],
-    },
-  ];
-
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading title="Work Experience" />
+    <section
+      id="experience"
+      className="section-pad border-t border-[var(--line)] bg-[var(--bg-elevated)]"
+    >
+      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        <SectionHeading
+          title="Experience"
+          subtitle="Roles where I've shipped product, collaborated across teams, and owned delivery."
+        />
 
-        <div className="relative border-l-4 border-blue-500 pl-8 ml-4 space-y-12">
+        <div className="relative space-y-0 border-l border-[var(--line)] pl-8 sm:pl-10">
           {experiences.map((exp, index) => (
             <ExperienceItem
               key={index}
-              number={index + 1}
               title={exp.title}
               company={exp.company}
               period={exp.period}
               responsibilities={exp.responsibilities}
+              isLast={index === experiences.length - 1}
             />
           ))}
         </div>

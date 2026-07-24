@@ -1,4 +1,3 @@
-// app/page.tsx
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -11,19 +10,17 @@ import Contact from "./components/sections/Contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
+    <div className="min-h-screen mesh-bg grain">
       <Header />
-
-      <main className="pt-16">
+      <main className="relative z-[1] pt-16">
         <Hero />
         <About />
+        <Experience />
         <Skills />
         <Projects />
-        <Experience />
         <Education />
         <Contact />
       </main>
-
       <Footer />
     </div>
   );

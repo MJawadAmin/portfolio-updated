@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree, Syne } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const figtree = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Jawad Amin - Portfolio",
-  description: "Mobile & Web App Developer specializing in MERN Stack, React Native, and Next.js. Building impactful software solutions with modern technologies.",
+  title: "Muhammad Jawad Amin — Mobile & Web App Developer",
+  description:
+    "Mobile & Web App Developer with hands-on experience in MERN Stack, React Native, and Next.js. Based in Islamabad, Pakistan.",
 };
 
 export default function RootLayout({
@@ -24,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${figtree.variable} ${syne.variable} antialiased`}>
         {children}
       </body>
     </html>
